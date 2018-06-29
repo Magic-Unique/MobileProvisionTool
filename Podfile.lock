@@ -1,0 +1,16 @@
+PODS:
+  - CommandLine (0.0.3)
+
+DEPENDENCIES:
+  - CommandLine
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CommandLine
+
+SPEC CHECKSUMS:
+  CommandLine: b2af8670a6e3685efdab9a15fb9b07919551a89c
+
+PODFILE CHECKSUM: 2764301bff6f8757558d1ffdc64e30bffda119c1
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DBFF83A6C47EA6BE1BB6EF5 /* libPods-MobileProvisionTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2645DF0B6D2D6BB088A15 /* libPods-MobileProvisionTool.a */; };
+		7E0BC0A720E4712D00A92F62 /* CLCommand+Infomations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BC0A620E4712D00A92F62 /* CLCommand+Infomations.m */; };
+		7E0BC0AA20E4726C00A92F62 /* NSString+Space.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BC0A920E4726C00A92F62 /* NSString+Space.m */; };
+		7E0BC0AF20E4758100A92F62 /* MPTMutableMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BC0AE20E4758100A92F62 /* MPTMutableMap.m */; };
+		7E0BC0B220E4759000A92F62 /* MPTMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BC0B120E4759000A92F62 /* MPTMapItem.m */; };
+		7E7CD9AD20E492AD00BA982D /* CLCommand+Main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CD9AC20E492AD00BA982D /* CLCommand+Main.m */; };
+		7E8CA3DA20CA103400325731 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3D920CA103400325731 /* main.m */; };
+		7E8CA3E820CA117000325731 /* CLCommand+Entitlements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3E720CA117000325731 /* CLCommand+Entitlements.m */; };
+		7E8CA3F020CA11ED00325731 /* MUMobileProvision.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3EA20CA11ED00325731 /* MUMobileProvision.m */; };
+		7E8CA3F120CA11ED00325731 /* MUEntitlements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3EC20CA11ED00325731 /* MUEntitlements.m */; };
+		7EB2F65E20E3273000225F45 /* MUFingerprints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2F65D20E3273000225F45 /* MUFingerprints.m */; };
+		7EB2F66120E32E7400225F45 /* NSDictionary+MUCodeSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2F66020E32E7400225F45 /* NSDictionary+MUCodeSign.m */; };
+		7EB2F66420E335C900225F45 /* NSData+MUCodeSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2F66320E335C900225F45 /* NSData+MUCodeSign.m */; };
+		7EE2EC8520CCEA6100BAFC41 /* MUCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE2EC8420CCEA6100BAFC41 /* MUCertificate.m */; };
+		7EED53C120CAEA88007CDEA7 /* CLCommand+Devices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EED53BF20CAEA88007CDEA7 /* CLCommand+Devices.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7E8CA3D420CA103400325731 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2BA2645DF0B6D2D6BB088A15 /* libPods-MobileProvisionTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProvisionTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0BC0A520E4712D00A92F62 /* CLCommand+Infomations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLCommand+Infomations.h"; sourceTree = "<group>"; };
+		7E0BC0A620E4712D00A92F62 /* CLCommand+Infomations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLCommand+Infomations.m"; sourceTree = "<group>"; };
+		7E0BC0A820E4726C00A92F62 /* NSString+Space.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Space.h"; sourceTree = "<group>"; };
+		7E0BC0A920E4726C00A92F62 /* NSString+Space.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Space.m"; sourceTree = "<group>"; };
+		7E0BC0AD20E4758100A92F62 /* MPTMutableMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPTMutableMap.h; sourceTree = "<group>"; };
+		7E0BC0AE20E4758100A92F62 /* MPTMutableMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPTMutableMap.m; sourceTree = "<group>"; };
+		7E0BC0B020E4759000A92F62 /* MPTMapItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPTMapItem.h; sourceTree = "<group>"; };
+		7E0BC0B120E4759000A92F62 /* MPTMapItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPTMapItem.m; sourceTree = "<group>"; };
+		7E7CD9AB20E492AD00BA982D /* CLCommand+Main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLCommand+Main.h"; sourceTree = "<group>"; };
+		7E7CD9AC20E492AD00BA982D /* CLCommand+Main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLCommand+Main.m"; sourceTree = "<group>"; };
+		7E8CA3D620CA103400325731 /* MobileProvisionTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MobileProvisionTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8CA3D920CA103400325731 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E8CA3E620CA117000325731 /* CLCommand+Entitlements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLCommand+Entitlements.h"; sourceTree = "<group>"; };
+		7E8CA3E720CA117000325731 /* CLCommand+Entitlements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLCommand+Entitlements.m"; sourceTree = "<group>"; };
+		7E8CA3EA20CA11ED00325731 /* MUMobileProvision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUMobileProvision.m; sourceTree = "<group>"; };
+		7E8CA3EC20CA11ED00325731 /* MUEntitlements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUEntitlements.m; sourceTree = "<group>"; };
+		7E8CA3ED20CA11ED00325731 /* MUMobileProvision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUMobileProvision.h; sourceTree = "<group>"; };
+		7E8CA3EE20CA11ED00325731 /* MUEntitlements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUEntitlements.h; sourceTree = "<group>"; };
+		7EB2F65C20E3273000225F45 /* MUFingerprints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUFingerprints.h; sourceTree = "<group>"; };
+		7EB2F65D20E3273000225F45 /* MUFingerprints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUFingerprints.m; sourceTree = "<group>"; };
+		7EB2F65F20E32E7400225F45 /* NSDictionary+MUCodeSign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MUCodeSign.h"; sourceTree = "<group>"; };
+		7EB2F66020E32E7400225F45 /* NSDictionary+MUCodeSign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MUCodeSign.m"; sourceTree = "<group>"; };
+		7EB2F66220E335C900225F45 /* NSData+MUCodeSign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+MUCodeSign.h"; sourceTree = "<group>"; };
+		7EB2F66320E335C900225F45 /* NSData+MUCodeSign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+MUCodeSign.m"; sourceTree = "<group>"; };
+		7EE2EC8320CCEA6100BAFC41 /* MUCertificate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUCertificate.h; sourceTree = "<group>"; };
+		7EE2EC8420CCEA6100BAFC41 /* MUCertificate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUCertificate.m; sourceTree = "<group>"; };
+		7EED53BF20CAEA88007CDEA7 /* CLCommand+Devices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLCommand+Devices.m"; sourceTree = "<group>"; };
+		7EED53C020CAEA88007CDEA7 /* CLCommand+Devices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLCommand+Devices.h"; sourceTree = "<group>"; };
+		7F75D96635D4C38E3D70F57C /* Pods-MobileProvisionTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProvisionTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProvisionTool/Pods-MobileProvisionTool.debug.xcconfig"; sourceTree = "<group>"; };
+		BE13438FDD15B115E5C52044 /* Pods-MobileProvisionTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileProvisionTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileProvisionTool/Pods-MobileProvisionTool.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E8CA3D320CA103400325731 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DBFF83A6C47EA6BE1BB6EF5 /* libPods-MobileProvisionTool.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E0BC0AB20E4753000A92F62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BC0AC20E4756C00A92F62 /* MapPrinter */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E0BC0AC20E4756C00A92F62 /* MapPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BC0B020E4759000A92F62 /* MPTMapItem.h */,
+				7E0BC0B120E4759000A92F62 /* MPTMapItem.m */,
+				7E0BC0AD20E4758100A92F62 /* MPTMutableMap.h */,
+				7E0BC0AE20E4758100A92F62 /* MPTMutableMap.m */,
+			);
+			path = MapPrinter;
+			sourceTree = "<group>";
+		};
+		7E7CD9AA20E492A100BA982D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7E7CD9AB20E492AD00BA982D /* CLCommand+Main.h */,
+				7E7CD9AC20E492AD00BA982D /* CLCommand+Main.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E8CA3CD20CA103400325731 = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3D820CA103400325731 /* MobileProvisionTool */,
+				7E8CA3D720CA103400325731 /* Products */,
+				87B6A832E328D03DF4508A2C /* Pods */,
+				E3C319A1DCE4604C869DD7E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E8CA3D720CA103400325731 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3D620CA103400325731 /* MobileProvisionTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E8CA3D820CA103400325731 /* MobileProvisionTool */ = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3E020CA115D00325731 /* Classes */,
+				7E8CA3D920CA103400325731 /* main.m */,
+			);
+			path = MobileProvisionTool;
+			sourceTree = "<group>";
+		};
+		7E8CA3E020CA115D00325731 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3E120CA115D00325731 /* Category */,
+				7E8CA3E220CA115D00325731 /* Library */,
+				7E8CA3E320CA115D00325731 /* Shared */,
+				7E8CA3E420CA115D00325731 /* Commands */,
+				7E0BC0AB20E4753000A92F62 /* Model */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7E8CA3E120CA115D00325731 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BC0A820E4726C00A92F62 /* NSString+Space.h */,
+				7E0BC0A920E4726C00A92F62 /* NSString+Space.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7E8CA3E220CA115D00325731 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3E920CA11ED00325731 /* MUCodeSign */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7E8CA3E320CA115D00325731 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7E8CA3E420CA115D00325731 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				7E7CD9AA20E492A100BA982D /* Main */,
+				7EB2F66520E3436E00225F45 /* Infomations */,
+				7EED53BE20CAEA88007CDEA7 /* Devices */,
+				7E8CA3E520CA115D00325731 /* Entitlements */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		7E8CA3E520CA115D00325731 /* Entitlements */ = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3E620CA117000325731 /* CLCommand+Entitlements.h */,
+				7E8CA3E720CA117000325731 /* CLCommand+Entitlements.m */,
+			);
+			path = Entitlements;
+			sourceTree = "<group>";
+		};
+		7E8CA3E920CA11ED00325731 /* MUCodeSign */ = {
+			isa = PBXGroup;
+			children = (
+				7E8CA3ED20CA11ED00325731 /* MUMobileProvision.h */,
+				7E8CA3EA20CA11ED00325731 /* MUMobileProvision.m */,
+				7E8CA3EE20CA11ED00325731 /* MUEntitlements.h */,
+				7E8CA3EC20CA11ED00325731 /* MUEntitlements.m */,
+				7EE2EC8320CCEA6100BAFC41 /* MUCertificate.h */,
+				7EE2EC8420CCEA6100BAFC41 /* MUCertificate.m */,
+				7EB2F65C20E3273000225F45 /* MUFingerprints.h */,
+				7EB2F65D20E3273000225F45 /* MUFingerprints.m */,
+				7EB2F65F20E32E7400225F45 /* NSDictionary+MUCodeSign.h */,
+				7EB2F66020E32E7400225F45 /* NSDictionary+MUCodeSign.m */,
+				7EB2F66220E335C900225F45 /* NSData+MUCodeSign.h */,
+				7EB2F66320E335C900225F45 /* NSData+MUCodeSign.m */,
+			);
+			path = MUCodeSign;
+			sourceTree = "<group>";
+		};
+		7EB2F66520E3436E00225F45 /* Infomations */ = {
+			isa = PBXGroup;
+			children = (
+				7E0BC0A520E4712D00A92F62 /* CLCommand+Infomations.h */,
+				7E0BC0A620E4712D00A92F62 /* CLCommand+Infomations.m */,
+			);
+			path = Infomations;
+			sourceTree = "<group>";
+		};
+		7EED53BE20CAEA88007CDEA7 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				7EED53C020CAEA88007CDEA7 /* CLCommand+Devices.h */,
+				7EED53BF20CAEA88007CDEA7 /* CLCommand+Devices.m */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		87B6A832E328D03DF4508A2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F75D96635D4C38E3D70F57C /* Pods-MobileProvisionTool.debug.xcconfig */,
+				BE13438FDD15B115E5C52044 /* Pods-MobileProvisionTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3C319A1DCE4604C869DD7E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BA2645DF0B6D2D6BB088A15 /* libPods-MobileProvisionTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E8CA3D520CA103400325731 /* MobileProvisionTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8CA3DD20CA103400325731 /* Build configuration list for PBXNativeTarget "MobileProvisionTool" */;
+			buildPhases = (
+				A95A97DA14E0C933A9C2A5C0 /* [CP] Check Pods Manifest.lock */,
+				7E8CA3D220CA103400325731 /* Sources */,
+				7E8CA3D320CA103400325731 /* Frameworks */,
+				7E8CA3D420CA103400325731 /* CopyFiles */,
+				7E8CA3F620CA301900325731 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileProvisionTool;
+			productName = MobileProvisionTool;
+			productReference = 7E8CA3D620CA103400325731 /* MobileProvisionTool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E8CA3CE20CA103400325731 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = unique;
+				TargetAttributes = {
+					7E8CA3D520CA103400325731 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 7E8CA3D120CA103400325731 /* Build configuration list for PBXProject "MobileProvisionTool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7E8CA3CD20CA103400325731;
+			productRefGroup = 7E8CA3D720CA103400325731 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E8CA3D520CA103400325731 /* MobileProvisionTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E8CA3F620CA301900325731 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm /usr/local/bin/mptool\ncp ${BUILT_PRODUCTS_DIR}/${TARGET_NAME} /usr/local/bin/mptool";
+		};
+		A95A97DA14E0C933A9C2A5C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileProvisionTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E8CA3D220CA103400325731 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E0BC0AA20E4726C00A92F62 /* NSString+Space.m in Sources */,
+				7E0BC0B220E4759000A92F62 /* MPTMapItem.m in Sources */,
+				7EED53C120CAEA88007CDEA7 /* CLCommand+Devices.m in Sources */,
+				7EB2F65E20E3273000225F45 /* MUFingerprints.m in Sources */,
+				7EB2F66420E335C900225F45 /* NSData+MUCodeSign.m in Sources */,
+				7E8CA3E820CA117000325731 /* CLCommand+Entitlements.m in Sources */,
+				7E8CA3F120CA11ED00325731 /* MUEntitlements.m in Sources */,
+				7EB2F66120E32E7400225F45 /* NSDictionary+MUCodeSign.m in Sources */,
+				7E0BC0AF20E4758100A92F62 /* MPTMutableMap.m in Sources */,
+				7E8CA3F020CA11ED00325731 /* MUMobileProvision.m in Sources */,
+				7E8CA3DA20CA103400325731 /* main.m in Sources */,
+				7EE2EC8520CCEA6100BAFC41 /* MUCertificate.m in Sources */,
+				7E0BC0A720E4712D00A92F62 /* CLCommand+Infomations.m in Sources */,
+				7E7CD9AD20E492AD00BA982D /* CLCommand+Main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7E8CA3DB20CA103400325731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7E8CA3DC20CA103400325731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7E8CA3DE20CA103400325731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F75D96635D4C38E3D70F57C /* Pods-MobileProvisionTool.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E8CA3DF20CA103400325731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE13438FDD15B115E5C52044 /* Pods-MobileProvisionTool.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E8CA3D120CA103400325731 /* Build configuration list for PBXProject "MobileProvisionTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E8CA3DB20CA103400325731 /* Debug */,
+				7E8CA3DC20CA103400325731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E8CA3DD20CA103400325731 /* Build configuration list for PBXNativeTarget "MobileProvisionTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E8CA3DE20CA103400325731 /* Debug */,
+				7E8CA3DF20CA103400325731 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E8CA3CE20CA103400325731 /* Project object */;
+}
