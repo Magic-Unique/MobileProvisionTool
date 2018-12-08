@@ -1,5 +1,5 @@
 PODS:
-  - CommandLine (0.0.3)
+  - CommandLine (1.1.0)
 
 DEPENDENCIES:
   - CommandLine
@@ -9,7 +9,7 @@ SPEC REPOS:
     - CommandLine
 
 SPEC CHECKSUMS:
-  CommandLine: b2af8670a6e3685efdab9a15fb9b07919551a89c
+  CommandLine: 45ae79fb0e59cf143548413327fc9a98557ccdc1
 
 PODFILE CHECKSUM: 2764301bff6f8757558d1ffdc64e30bffda119c1
 

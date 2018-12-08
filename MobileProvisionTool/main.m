@@ -10,6 +10,8 @@
 #import "CLCommand+Entitlements.h"
 #import "CLCommand+Devices.h"
 
+#import <CommandLine/CLLanguage.h>
+
 #import <Security/Security.h>
 #import "MUMobileProvision.h"
 
@@ -50,11 +52,13 @@ int MPTIsDebuggingInXcode() {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        [[CLLanguage ChineseLanguage] apply];
         MPTInitCommands();
         if (MPTIsDebuggingInXcode()) {
-            [CLCommand handleRequest:[CLRequest requestWithArguments:@[@"devices", @"list", @"-p", @"-i", @"/Users/shuang/Downloads/H0ud1n1 2.mobileprovision"]]];
+            [CLCommand handleRequest:[CLRequest requestWithArguments:@[]]];
+//            [CLCommand handleRequest:[CLRequest requestWithArguments:@[@"devices", @"list", @"-p", @"-i", @"/Users/shuang/Downloads/H0ud1n1 2.mobileprovision"]]];
         } else {
-            CLCommandHandleAndReturn();
+            CLCommandMain();
         }
 //        NSString *file = @"/Users/shuang/Downloads/H0ud1n1 2.mobileprovision";
 //        file = @"/Users/shuang/Desktop/embedded.mobileprovision";
