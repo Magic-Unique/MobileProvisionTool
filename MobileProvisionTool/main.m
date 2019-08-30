@@ -21,20 +21,6 @@
 #include <sys/sysctl.h>
 #endif
 
-void MPTInitCommands() {
-    Class class = objc_getMetaClass("CLCommand");
-    unsigned count = 0;
-    Method *methodList = class_copyMethodList(class, &count);
-    for (unsigned i = 0; i < count; i++) {
-        Method method = methodList[i];
-        SEL sel = method_getName(method);
-        NSString *name = NSStringFromSelector(sel);
-        if ([name hasPrefix:@"__init_"]) {
-            [CLCommand performSelector:sel];
-        }
-    }
-}
-
 int MPTIsDebuggingInXcode() {
     size_t size = sizeof(struct kinfo_proc);
     struct kinfo_proc info;
@@ -52,14 +38,8 @@ int MPTIsDebuggingInXcode() {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [[CLLanguage ChineseLanguage] apply];
-        MPTInitCommands();
-        if (MPTIsDebuggingInXcode()) {
-            [CLCommand handleRequest:[CLRequest requestWithArguments:@[]]];
-//            [CLCommand handleRequest:[CLRequest requestWithArguments:@[@"devices", @"list", @"-p", @"-i", @"/Users/shuang/Downloads/H0ud1n1 2.mobileprovision"]]];
-        } else {
-            CLCommandMain();
-        }
+        CLMakeSubcommand(CLCommand, __init_);
+        CLCommandMain();
 //        NSString *file = @"/Users/shuang/Downloads/H0ud1n1 2.mobileprovision";
 //        file = @"/Users/shuang/Desktop/embedded.mobileprovision";
 //        MUMobileProvision *provision = [MUMobileProvision mobileProvisionWithContentsOfFile:file];

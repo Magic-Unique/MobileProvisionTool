@@ -15,18 +15,18 @@
 @implementation CLCommand (Infomations)
 
 + (void)__init_Print {
-    CLCommand *print = [CLCommand.main defineSubcommand:@"print"];
+    CLCommand *print = [CLCommand.mainCommand defineSubcommand:@"print"];
     print.explain = @"输出文件信息";
     print.setFlag(@"en").setExplain(@"Print with English");
     print.addRequirePath(@"input");
-    [print onHandlerRequest:^CLResponse *(CLCommand *command, CLRequest *request) {
-        NSString *input = [CLIOPath abslutePath:request.paths.firstObject];
+    [print handleProcess:^int(CLCommand * _Nonnull command, CLProcess * _Nonnull process) {
+        NSString *input = [CLIOPath abslutePath:process.paths.firstObject];
         MUMobileProvision *provision = [MUMobileProvision mobileProvisionWithContentsOfFile:input];
         if (provision == nil) {
-            [request error:@"Can not read the file"];
+            CLError(@"Can not read the file");
         } else {
             MPTMutableMap *map = [[MPTMutableMap alloc] init];
-            if ([request flag:@"en"]) {
+            if ([process flag:@"en"]) {
                 map.en = YES;
                 [map.items addObject:[MPTMapItem itemWithTitle:@"Name" value:provision.Name valueStyle:0]];
                 [map.items addObject:[MPTMapItem itemWithTitle:@"App ID Name" value:provision.AppIDName valueStyle:0]];

@@ -1,5 +1,21 @@
 PODS:
-  - CommandLine (1.1.0)
+  - CommandLine (2.2.0):
+    - CommandLine/ANSI (= 2.2.0)
+    - CommandLine/Command (= 2.2.0)
+    - CommandLine/Launcher (= 2.2.0)
+    - CommandLine/Main (= 2.2.0)
+    - CommandLine/Tools (= 2.2.0)
+  - CommandLine/ANSI (2.2.0):
+    - CommandLine/Main
+    - CommandLine/Tools
+  - CommandLine/Command (2.2.0):
+    - CommandLine/ANSI
+    - CommandLine/Main
+  - CommandLine/Launcher (2.2.0):
+    - CommandLine/Main
+  - CommandLine/Main (2.2.0)
+  - CommandLine/Tools (2.2.0):
+    - CommandLine/Main
 
 DEPENDENCIES:
   - CommandLine
@@ -9,8 +25,8 @@ SPEC REPOS:
     - CommandLine
 
 SPEC CHECKSUMS:
-  CommandLine: 45ae79fb0e59cf143548413327fc9a98557ccdc1
+  CommandLine: 2ba6c34193679673652010ce269cbd27bf04dbad
 
 PODFILE CHECKSUM: 2764301bff6f8757558d1ffdc64e30bffda119c1
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

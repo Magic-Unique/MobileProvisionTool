@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0E7139231614D800991344 /* CLCommand+List.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0E7138231614D800991344 /* CLCommand+List.m */; };
 		6DBFF83A6C47EA6BE1BB6EF5 /* libPods-MobileProvisionTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA2645DF0B6D2D6BB088A15 /* libPods-MobileProvisionTool.a */; };
 		7E0BC0A720E4712D00A92F62 /* CLCommand+Infomations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BC0A620E4712D00A92F62 /* CLCommand+Infomations.m */; };
 		7E0BC0AA20E4726C00A92F62 /* NSString+Space.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BC0A920E4726C00A92F62 /* NSString+Space.m */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		2BA2645DF0B6D2D6BB088A15 /* libPods-MobileProvisionTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileProvisionTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D0E7137231614D800991344 /* CLCommand+List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLCommand+List.h"; sourceTree = "<group>"; };
+		6D0E7138231614D800991344 /* CLCommand+List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLCommand+List.m"; sourceTree = "<group>"; };
 		7E0BC0A520E4712D00A92F62 /* CLCommand+Infomations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLCommand+Infomations.h"; sourceTree = "<group>"; };
 		7E0BC0A620E4712D00A92F62 /* CLCommand+Infomations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CLCommand+Infomations.m"; sourceTree = "<group>"; };
 		7E0BC0A820E4726C00A92F62 /* NSString+Space.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Space.h"; sourceTree = "<group>"; };
@@ -82,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D0E7136231614CD00991344 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				6D0E7137231614D800991344 /* CLCommand+List.h */,
+				6D0E7138231614D800991344 /* CLCommand+List.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		7E0BC0AB20E4753000A92F62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 				7E7CD9AA20E492A100BA982D /* Main */,
 				7EB2F66520E3436E00225F45 /* Infomations */,
 				7EED53BE20CAEA88007CDEA7 /* Devices */,
+				6D0E7136231614CD00991344 /* List */,
 				7E8CA3E520CA115D00325731 /* Entitlements */,
 			);
 			path = Commands;
@@ -346,6 +359,7 @@
 				7EB2F66420E335C900225F45 /* NSData+MUCodeSign.m in Sources */,
 				7E8CA3E820CA117000325731 /* CLCommand+Entitlements.m in Sources */,
 				7E8CA3F120CA11ED00325731 /* MUEntitlements.m in Sources */,
+				6D0E7139231614D800991344 /* CLCommand+List.m in Sources */,
 				7EB2F66120E32E7400225F45 /* NSDictionary+MUCodeSign.m in Sources */,
 				7E0BC0AF20E4758100A92F62 /* MPTMutableMap.m in Sources */,
 				7E8CA3F020CA11ED00325731 /* MUMobileProvision.m in Sources */,

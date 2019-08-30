@@ -13,15 +13,15 @@
 @implementation CLCommand (Entitlements)
 
 + (void)__init_Entitlements {
-    CLCommand *entitlements = [[CLCommand main] defineSubcommand:@"entitlements"];
+    CLCommand *entitlements = [[CLCommand mainCommand] defineSubcommand:@"entitlements"];
     entitlements.explain = @"输出描述文件中的权限";
     entitlements.setQuery(@"input").setAbbr('i').require().setExample(@"/path/to/.mobileprovision").setExplain(@"输入路径");
     entitlements.setQuery(@"output").setAbbr('o').optional().setExample(@"/path/to/entitlements").setExplain(@"plist 输出路径");
     entitlements.setFlag(@"print").setAbbr('p').setExplain(@"显示到窗口中");
-    [entitlements onHandlerRequest:^CLResponse *(CLCommand *command, CLRequest *request) {
-        NSString *input = [request pathForQuery:@"input"];
-        NSString *output = [request pathForQuery:@"output"];
-        BOOL print = [request.flags containsObject:@"print"];
+    [entitlements handleProcess:^int(CLCommand * _Nonnull command, CLProcess * _Nonnull process) {
+        NSString *input = [process pathForQuery:@"input"];
+        NSString *output = [process pathForQuery:@"output"];
+        BOOL print = [process.flags containsObject:@"print"];
         if (print == NO && output == NO) {
             [command printHelpInfo];
         }
@@ -38,7 +38,7 @@
         if (output) {
             [entitlements.JSON writeToFile:output atomically:YES];
         }
-        return [CLResponse succeed:nil];
+        return EXIT_SUCCESS;
     }];
 }
 

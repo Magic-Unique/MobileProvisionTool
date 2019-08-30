@@ -12,7 +12,7 @@
 @implementation CLCommand (Devices)
 
 + (void)__init_Devices {
-    CLCommand *devices = [[CLCommand main] defineSubcommand:@"devices"];
+    CLCommand *devices = [[CLCommand mainCommand] defineSubcommand:@"devices"];
     devices.explain = @"设备列表操作";
     {
         CLCommand *list = [devices defineSubcommand:@"list"];
@@ -21,30 +21,30 @@
         list.setQuery(@"output").setAbbr('o').optional().setExample(@"/path/to/entitlements").setExplain(@"输出文件路径");
         list.setFlag(@"print").setAbbr('p').setExplain(@"显示所有设备");
         list.setFlag(@"json").setAbbr('j').setExplain(@"使用 JSON 格式输出文件，默认使用 plist 格式");
-        [list onHandlerRequest:^CLResponse *(CLCommand *command, CLRequest *request) {
-            NSString *input = [request pathForQuery:@"input"];
-            NSString *output = [request pathForQuery:@"output"];
-            BOOL print = [request flag:@"print"];
-            BOOL json = [request flag:@"json"];
+        [list handleProcess:^int(CLCommand * _Nonnull command, CLProcess * _Nonnull process) {
+            NSString *input = [process pathForQuery:@"input"];
+            NSString *output = [process pathForQuery:@"output"];
+            BOOL print = [process flag:@"print"];
+            BOOL json = [process flag:@"json"];
             if (print == NO && output == NO) {
                 [command printHelpInfo];
             }
             MUMobileProvision *provision = [MUMobileProvision mobileProvisionWithContentsOfFile:input];
             if (provision == nil) {
-                [request error:@"Can not read the file `%@`.\n", input.lastPathComponent];
-                return [CLResponse error:nil];
+                CLError(@"Can not read the file `%@`.\n", input.lastPathComponent);
+                return EXIT_FAILURE;
             }
             
             NSArray<NSString *> *devices = provision.ProvisionedDevices;
             if (print) {
                 if (devices == nil) {
-                    [request warning:@"The provision is not containing any devices.\n"];
-                    return [CLResponse succeed:nil];
+                    CLWarning(@"The provision is not containing any devices.\n");
+                    return EXIT_SUCCESS;
                 } else {
                     devices = [devices sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
                         return [obj1 compare:obj2];
                     }];
-                    [request print:@"There are %lu devices: \n", devices.count];
+                    CLPrintf(@"There are %lu devices: \n", devices.count);
                     
                     NSString *lastPrefix = nil;
                     BOOL flag = NO;
@@ -52,7 +52,7 @@
                         NSString *currentPrefix = [device substringToIndex:1];
                         
                         if (![currentPrefix isEqualToString:lastPrefix]) {
-                            CCPrintf(CCStyleBord, @"\n============================================\n%@\n", currentPrefix.uppercaseString);
+                            CCPrintf(CCStyleBold, @"\n============================================\n%@\n", currentPrefix.uppercaseString);
                         }
                         
                         lastPrefix = currentPrefix;
@@ -64,7 +64,7 @@
                         }
                         flag = !flag;
                     }
-                    [request print:@"There are %lu devices.\n\n", devices.count];
+                    CLPrintf(@"There are %lu devices.\n\n", devices.count);
                 }
             }
             
@@ -73,7 +73,7 @@
                     NSError *error = nil;
                     NSData *data = [NSJSONSerialization dataWithJSONObject:devices options:kNilOptions error:&error];
                     if (error) {
-                        [request error:error.localizedDescription];
+                        CLError(error.localizedDescription);
                     } else {
                         [data writeToFile:output atomically:YES];
                     }
@@ -81,7 +81,7 @@
                     [devices writeToFile:output atomically:YES];
                 }
             }
-            return [CLResponse succeed:nil];
+            return EXIT_SUCCESS;
         }];
     }
     {
@@ -89,26 +89,26 @@
         contain.explain = @"检查是否包含某个设备";
         contain.setQuery(@"input").setAbbr('i').require().setExample(@"/path/to/.mobileprovision").setExplain(@"描述文件路径");
         contain.setQuery(@"device").setAbbr('d').require().setExample(@"UDID").setExplain(@"要比较的设备信息，可以是其中的某一段，输入越长越精确");
-        [contain onHandlerRequest:^CLResponse *(CLCommand *command, CLRequest *request) {
-            NSString *input = [request pathForQuery:@"input"];
-            NSString *UDID = [request stringForQuery:@"device"];
+        [contain handleProcess:^int(CLCommand * _Nonnull command, CLProcess * _Nonnull process) {
+            NSString *input = [process pathForQuery:@"input"];
+            NSString *UDID = [process stringForQuery:@"device"];
             
             MUMobileProvision *provision = [MUMobileProvision mobileProvisionWithContentsOfFile:input];
             if (provision == nil) {
-                [request error:@"无法读取文件 `%@`.\n", input.lastPathComponent];
-                return [CLResponse error:nil];
+                CLError(@"无法读取文件 `%@`.\n", input.lastPathComponent);
+                return EXIT_FAILURE;
             }
             
             if (provision.ProvisionsAllDevices) {
                 //  Enterprice
-                [request success:@"true"];
+                CLSuccess(@"true");
             } else {
                 NSArray<NSString *> *devices = provision.ProvisionedDevices;
                 if (UDID.length == 40) {
                     if ([devices containsObject:UDID]) {
-                        [request success:@"true"];
+                        CLSuccess(@"true");
                     } else {
-                        [request error:@"false"];
+                        CLError(@"false");
                     }
                 } else {
                     BOOL contains = NO;
@@ -116,13 +116,13 @@
                     for (NSString *item in devices) {
                         if ([item containsString:UDID]) {
                             contains = YES;
-                            [request info:@"%@ %@", @(++count), item];
+                            CLInfo(@"%@ %@", @(++count), item);
                         }
                     }
                 }
             }
             
-            return [CLResponse succeed:nil];
+            return EXIT_SUCCESS;
         }];
     }
 }

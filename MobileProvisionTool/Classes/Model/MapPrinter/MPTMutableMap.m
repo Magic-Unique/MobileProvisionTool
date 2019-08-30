@@ -14,7 +14,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _titleStyle = CCStyleBord;
+        _titleStyle = CCStyleBold;
         _items = [NSMutableArray array];
     }
     return self;
