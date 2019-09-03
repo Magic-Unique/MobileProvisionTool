@@ -7,7 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MUFingerprints.h"
+
+@interface MUFingerprints : NSObject
+
+@property (nonatomic, strong, readonly) NSString *SHA256;
+
+@property (nonatomic, strong, readonly) NSString *SHA1;
+
++ (instancetype)fingerprintsWithDictionary:(NSDictionary *)dictionary;
+
+@end
+
+@interface MPValidity : NSObject
+
+@property (nonatomic, strong, readonly) NSDate *notValidAfter;
+
+@property (nonatomic, strong, readonly) NSDate *notValidBefore;
+
+@end
+
 
 @interface MUCertificate : NSObject
 
@@ -15,15 +33,11 @@
 
 @property (nonatomic, strong, readonly) NSString *serialNumber;
 
-@property (nonatomic, strong, readonly) NSDate *expireDate;
-
-@property (nonatomic, strong, readonly) NSDate *createDate;
-
 @property (nonatomic, assign, readonly) BOOL expired;
 
 @property (nonatomic, strong, readonly) MUFingerprints *fingerprints;
 
-
+@property (nonatomic, strong, readonly) MPValidity *validity;
 
 @property (nonatomic, strong, readonly) NSData *data;
 

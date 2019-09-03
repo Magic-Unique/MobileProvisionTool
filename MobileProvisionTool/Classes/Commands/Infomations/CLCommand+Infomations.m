@@ -38,8 +38,8 @@
                 certificates.en = YES;
                 [provision.DeveloperCertificates enumerateObjectsUsingBlock:^(MUCertificate *obj, NSUInteger idx, BOOL *stop) {
                     [certificates.items addObject:[MPTMapItem itemWithTitle:@"Name" value:obj.name valueStyle:CCStyleLight]];
-                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"Create" value:obj.createDate valueStyle:CCStyleLight]];
-                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"Expire" value:obj.expireDate valueStyle:CCStyleLight]];
+                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"Not Valid Before" value:obj.validity.notValidBefore valueStyle:CCStyleLight]];
+                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"Not Valid After" value:obj.validity.notValidAfter valueStyle:CCStyleLight]];
                     [certificates.items addObject:[MPTMapItem itemWithTitle:@"SHA-1" value:obj.fingerprints.SHA1.uppercaseString valueStyle:CCStyleLight]];
                     [certificates.items addObject:[MPTMapItem itemWithTitle:@"SHA-256" value:obj.fingerprints.SHA256.uppercaseString valueStyle:CCStyleLight]];
                     [certificates.items addObject:[MPTMapItem line]];
@@ -64,8 +64,8 @@
                 MPTMutableMap *certificates = [[MPTMutableMap alloc] init];
                 [provision.DeveloperCertificates enumerateObjectsUsingBlock:^(MUCertificate *obj, NSUInteger idx, BOOL *stop) {
                     [certificates.items addObject:[MPTMapItem itemWithTitle:@"证书名称" value:obj.name valueStyle:CCStyleLight]];
-                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"创建时间" value:obj.createDate valueStyle:CCStyleLight]];
-                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"过期时间" value:obj.expireDate valueStyle:CCStyleLight]];
+                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"创建时间" value:obj.validity.notValidBefore valueStyle:CCStyleLight]];
+                    [certificates.items addObject:[MPTMapItem itemWithTitle:@"过期时间" value:obj.validity.notValidAfter valueStyle:CCStyleLight]];
                     [certificates.items addObject:[MPTMapItem itemWithTitle:@"一代哈希" value:obj.fingerprints.SHA1.uppercaseString valueStyle:CCStyleLight]];
                     [certificates.items addObject:[MPTMapItem itemWithTitle:@"二代哈希" value:obj.fingerprints.SHA256.uppercaseString valueStyle:CCStyleLight]];
                     [certificates.items addObject:[MPTMapItem line]];
@@ -85,7 +85,7 @@
             
             [map printWithSpace:0];
         }
-        return nil;
+        return EXIT_SUCCESS;
     }];
 }
 

@@ -18,7 +18,6 @@
 		7E8CA3E820CA117000325731 /* CLCommand+Entitlements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3E720CA117000325731 /* CLCommand+Entitlements.m */; };
 		7E8CA3F020CA11ED00325731 /* MUMobileProvision.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3EA20CA11ED00325731 /* MUMobileProvision.m */; };
 		7E8CA3F120CA11ED00325731 /* MUEntitlements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8CA3EC20CA11ED00325731 /* MUEntitlements.m */; };
-		7EB2F65E20E3273000225F45 /* MUFingerprints.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2F65D20E3273000225F45 /* MUFingerprints.m */; };
 		7EB2F66120E32E7400225F45 /* NSDictionary+MUCodeSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2F66020E32E7400225F45 /* NSDictionary+MUCodeSign.m */; };
 		7EB2F66420E335C900225F45 /* NSData+MUCodeSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB2F66320E335C900225F45 /* NSData+MUCodeSign.m */; };
 		7EE2EC8520CCEA6100BAFC41 /* MUCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE2EC8420CCEA6100BAFC41 /* MUCertificate.m */; };
@@ -59,8 +58,6 @@
 		7E8CA3EC20CA11ED00325731 /* MUEntitlements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUEntitlements.m; sourceTree = "<group>"; };
 		7E8CA3ED20CA11ED00325731 /* MUMobileProvision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUMobileProvision.h; sourceTree = "<group>"; };
 		7E8CA3EE20CA11ED00325731 /* MUEntitlements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUEntitlements.h; sourceTree = "<group>"; };
-		7EB2F65C20E3273000225F45 /* MUFingerprints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUFingerprints.h; sourceTree = "<group>"; };
-		7EB2F65D20E3273000225F45 /* MUFingerprints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUFingerprints.m; sourceTree = "<group>"; };
 		7EB2F65F20E32E7400225F45 /* NSDictionary+MUCodeSign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MUCodeSign.h"; sourceTree = "<group>"; };
 		7EB2F66020E32E7400225F45 /* NSDictionary+MUCodeSign.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MUCodeSign.m"; sourceTree = "<group>"; };
 		7EB2F66220E335C900225F45 /* NSData+MUCodeSign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+MUCodeSign.h"; sourceTree = "<group>"; };
@@ -215,8 +212,6 @@
 				7E8CA3EC20CA11ED00325731 /* MUEntitlements.m */,
 				7EE2EC8320CCEA6100BAFC41 /* MUCertificate.h */,
 				7EE2EC8420CCEA6100BAFC41 /* MUCertificate.m */,
-				7EB2F65C20E3273000225F45 /* MUFingerprints.h */,
-				7EB2F65D20E3273000225F45 /* MUFingerprints.m */,
 				7EB2F65F20E32E7400225F45 /* NSDictionary+MUCodeSign.h */,
 				7EB2F66020E32E7400225F45 /* NSDictionary+MUCodeSign.m */,
 				7EB2F66220E335C900225F45 /* NSData+MUCodeSign.h */,
@@ -325,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm /usr/local/bin/mptool\ncp ${BUILT_PRODUCTS_DIR}/${TARGET_NAME} /usr/local/bin/mptool";
+			shellScript = "rm /usr/local/bin/mptool\ncp ${BUILT_PRODUCTS_DIR}/${TARGET_NAME} /usr/local/bin/mptool\n";
 		};
 		A95A97DA14E0C933A9C2A5C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -355,7 +350,6 @@
 				7E0BC0AA20E4726C00A92F62 /* NSString+Space.m in Sources */,
 				7E0BC0B220E4759000A92F62 /* MPTMapItem.m in Sources */,
 				7EED53C120CAEA88007CDEA7 /* CLCommand+Devices.m in Sources */,
-				7EB2F65E20E3273000225F45 /* MUFingerprints.m in Sources */,
 				7EB2F66420E335C900225F45 /* NSData+MUCodeSign.m in Sources */,
 				7E8CA3E820CA117000325731 /* CLCommand+Entitlements.m in Sources */,
 				7E8CA3F120CA11ED00325731 /* MUEntitlements.m in Sources */,

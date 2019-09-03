@@ -9,6 +9,32 @@
 #import "MUCertificate.h"
 #import <Security/Security.h>
 #import "NSDictionary+MUCodeSign.h"
+#import "NSData+MUCodeSign.h"
+
+@implementation MUFingerprints
+
++ (instancetype)fingerprintsWithDictionary:(NSDictionary *)dictionary {
+    NSData *SHA256 = dictionary[@"SHA-256"];
+    NSData *SHA1 = dictionary[@"SHA-1"];
+    MUFingerprints *fingerprints = [self new];
+    fingerprints->_SHA1 = [SHA1 codesign_bytesString];
+    fingerprints->_SHA256 = [SHA256 codesign_bytesString];
+    return fingerprints;
+}
+
+@end
+
+@implementation MPValidity
+
++ (instancetype)validityWithDictionary:(NSDictionary *)dictionary {
+    MPValidity *validity = [[self alloc] init];
+    validity->_notValidAfter = [NSDate dateWithTimeIntervalSinceReferenceDate:[dictionary[@"Not Valid After"] doubleValue]];
+    validity->_notValidBefore = [NSDate dateWithTimeIntervalSinceReferenceDate:[dictionary[@"Not Valid Before"] doubleValue]];
+    return validity;
+}
+
+@end
+
 
 @interface MUCertificate ()
 {
@@ -27,7 +53,10 @@
         _name = CFBridgingRelease(SecCertificateCopySubjectSummary(_certificate));
         
         NSDictionary *JSON = (__bridge NSDictionary *)SecCertificateCopyValues(_certificate, NULL, NULL);
+//        NSLog(@"%@", JSON);
         JSON = [NSDictionary codesign_dictionaryWithCertificateInfo:JSON];
+//        NSLog(@"%@", JSON);
+        
         _JSON = JSON;
         
         [self format];
@@ -46,12 +75,10 @@
     
     if (JSON[@"Expired"]) {
         _expired = YES;
-        _expireDate = JSON[@"Expired"];
     } else {
         _expired = NO;
-        _expireDate = JSON[@"Expires"];
     }
-    _createDate = [NSDate dateWithTimeIntervalSinceReferenceDate:[JSON[@"Not Valid Before"] doubleValue]];
+    _validity = [MPValidity validityWithDictionary:JSON];
     _fingerprints = [MUFingerprints fingerprintsWithDictionary:JSON[@"Fingerprints"]];
 }
 
