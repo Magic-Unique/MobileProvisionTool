@@ -35,7 +35,7 @@
         return object;
     } else if ([object isKindOfClass:[NSDate class]]) {
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = en ? @"yyyy-MM-dd hh:mm:ss" : @"yyyy年MM月dd日 hh:mm:ss";
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
         return [formatter stringFromDate:object];
     } else {
         return [NSString stringWithFormat:@"%@", object];
